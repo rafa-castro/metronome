@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioUnit/AudioUnit.h>
 
 @interface ViewController : UIViewController
+{
+    AudioComponentInstance toneUnit;
 
-
+@public
+    double frequency;
+    double sampleRate;
+    double theta;
+}
 @end
 

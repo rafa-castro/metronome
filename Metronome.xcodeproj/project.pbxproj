@@ -15,6 +15,8 @@
 		4AABE0E91C7011570091D8AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AABE0E71C7011570091D8AB /* LaunchScreen.storyboard */; };
 		4AABE0F41C7011570091D8AB /* MetronomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AABE0F31C7011570091D8AB /* MetronomeTests.m */; };
 		4AABE0FF1C7011570091D8AB /* MetronomeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AABE0FE1C7011570091D8AB /* MetronomeUITests.m */; };
+		4AABE10D1C7014BE0091D8AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AABE10C1C7014BE0091D8AB /* AVFoundation.framework */; };
+		4AABE10F1C7015240091D8AB /* teste.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AABE10E1C7015240091D8AB /* teste.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4AABE0FA1C7011570091D8AB /* MetronomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetronomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AABE0FE1C7011570091D8AB /* MetronomeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetronomeUITests.m; sourceTree = "<group>"; };
 		4AABE1001C7011570091D8AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AABE10C1C7014BE0091D8AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4AABE10E1C7015240091D8AB /* teste.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teste.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AABE10D1C7014BE0091D8AB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 		4AABE0CD1C7011570091D8AB = {
 			isa = PBXGroup;
 			children = (
+				4AABE10C1C7014BE0091D8AB /* AVFoundation.framework */,
 				4AABE0D81C7011570091D8AB /* Metronome */,
 				4AABE0F21C7011570091D8AB /* MetronomeTests */,
 				4AABE0FD1C7011570091D8AB /* MetronomeUITests */,
@@ -109,6 +115,7 @@
 				4AABE0E51C7011570091D8AB /* Assets.xcassets */,
 				4AABE0E71C7011570091D8AB /* LaunchScreen.storyboard */,
 				4AABE0EA1C7011570091D8AB /* Info.plist */,
+				4AABE10E1C7015240091D8AB /* teste.mp3 */,
 				4AABE0D91C7011570091D8AB /* Supporting Files */,
 			);
 			path = Metronome;
@@ -245,6 +252,7 @@
 			files = (
 				4AABE0E91C7011570091D8AB /* LaunchScreen.storyboard in Resources */,
 				4AABE0E61C7011570091D8AB /* Assets.xcassets in Resources */,
+				4AABE10F1C7015240091D8AB /* teste.mp3 in Resources */,
 				4AABE0E41C7011570091D8AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
