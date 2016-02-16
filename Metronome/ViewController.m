@@ -25,7 +25,6 @@ OSStatus RenderTone(
     ViewController *viewController = (__bridge ViewController *)inRefCon;
     double theta_increment = 2.0 * M_PI * viewController->frequency / viewController->sampleRate;
     
-    
     // This is a mono tone generator so we only need the first buffer
     const int channel = 0;
     Float32 *buffer = (Float32 *)ioData->mBuffers[channel].mData;
