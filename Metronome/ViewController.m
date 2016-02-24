@@ -9,6 +9,13 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
+@interface ViewController
+()
+
+@property (nonatomic, weak) IBOutlet UILabel *label;
+
+@end
+
 OSStatus RenderTone(
                     void *inRefCon,
                     AudioUnitRenderActionFlags 	*ioActionFlags,
@@ -30,8 +37,7 @@ OSStatus RenderTone(
     Float32 *buffer = (Float32 *)ioData->mBuffers[channel].mData;
     
     // Generate the samples
-    int bpm = 180;
-    int periodInMs = 60000 / bpm;
+    int periodInMs = 60000.0 / viewController->bpm;
     int periodInSamples = periodInMs * viewController->sampleRate / 1000;
     int toneDuration = 70; // ms
     int count = inTimeStamp->mSampleTime;
@@ -137,6 +143,22 @@ OSStatus RenderTone(
     }
 }
 
+- (IBAction)faster:(id)sender
+{
+    bpm++;
+    [self updateUi];
+}
+
+- (IBAction)slower:(id)sender
+{
+    bpm--;
+    [self updateUi];
+}
+
+- (void)updateUi
+{
+    self.label.text = [NSString stringWithFormat:@"%d", bpm];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -144,10 +166,12 @@ OSStatus RenderTone(
 
     frequency = 440;
     sampleRate = 44100;
+    bpm = 180;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setPreferredSampleRate:sampleRate error:NULL];
     [audioSession setActive:true error:NULL];
     [self togglePlay];
+    [self updateUi];
 }
 
 - (void)didReceiveMemoryWarning {

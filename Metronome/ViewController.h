@@ -17,6 +17,7 @@
     double frequency;
     double sampleRate;
     double theta;
+    int bpm;
 }
 @end
 
